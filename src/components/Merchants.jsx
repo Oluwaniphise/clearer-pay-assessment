@@ -5,19 +5,16 @@ import { Merchant } from './Merchant'
 
 export const Merchants = () => {
     const merchants = [
-        { id: 1, name: 'Adisa Deborah', initials: 'AD' },
-        { id: 2, name: 'Adisa Deborah', initials: 'AD' },
-        { id: 3, name: 'Adisa Deborah', initials: 'AD' },
-        { id: 4, name: 'Adisa Deborah', initials: 'AD' },
-        { id: 4, name: 'Adisa Deborah', initials: 'AD' },
-        { id: 4, name: 'Adisa Deborah', initials: 'AD' },
-        { id: 4, name: 'Adisa Deborah', initials: 'AD' },
-        { id: 4, name: 'Adisa Deborah', initials: 'AD' },
-        { id: 5, name: 'Adisa Deborah', initials: 'AD' },
+        { id: 1, name: 'Adisa Deborah' },
+        { id: 2, name: 'Adisa Deborah' },
+        { id: 3, name: 'Adisa Deborah' },
+        { id: 4, name: 'Adisa Deborah' },
+        { id: 5, name: 'Adisa Deborah' },
+
     ];
     return (
         <CardComponent>
-            <div className='w-full flex flex-col gap-10'>
+            <div className='h-[180px] w-full grid grid-rows-[auto_1fr_auto]'>
                 <div className='flex flex-row justify-between items-center'>
                     <h4 className='text-gray-900 text-xl'>Merchants</h4>
 
@@ -28,12 +25,16 @@ export const Merchants = () => {
 
                 </div>
 
-                <div className="w-full overflow-x-auto py-4">
+                <div className="w-full flex flex-row justify-between overflow-x-auto xl:overflow-x-hidden py-4">
                     <div className="flex">
                         {merchants.map((merchant) => (
                             <Merchant key={merchant.id} merchant={merchant} />
                         ))}
                     </div>
+                </div>
+
+                <div className='flex cursor-pointer justify-end'>
+                    <h5 className='text-gray-400'>See all</h5>
                 </div>
             </div>
         </CardComponent>

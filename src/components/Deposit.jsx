@@ -6,14 +6,14 @@ import { Button } from './Button'
 export const Deposit = () => {
     return (
         <CardComponent>
-            <div className='w-full flex flex-col gap-10'>
-                <div className='flex flex-col gap-3'>
+            <div className='h-[180px] justify-between  w-full flex flex-col gap-s5'>
+                <div className='flex flex-col gap-3.5'>
                     <div className='flex flex-row justify-between items-center'>
                         <div className='flex gap-2 items-center'>
-                            <div className='flex gap-1'>
+                            <div className='flex items-center gap-1'>
                                 <span>NGN</span>
                                 <span>.</span>
-                                <span className='text-gray-500'>Naira</span>
+                                <span className='text-gray-500 text-sm'>Naira</span>
                             </div>
 
                             <ChevronDown className='w-6 h-6 text-gray-400' />
@@ -25,7 +25,7 @@ export const Deposit = () => {
                         </button>
                     </div>
 
-                    <h4 className='text-xl text-black font-semibold'>₦ 34,645,233</h4>
+                    <h4 className='text-2xl text-black font-semibold'>₦ 34,645,233</h4>
                 </div>
 
                 <div className='flex flex-row overflow-x-auto xl:overflow-hidden gap-3 justify-between '>
