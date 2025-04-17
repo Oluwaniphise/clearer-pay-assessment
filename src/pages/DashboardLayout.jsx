@@ -1,6 +1,7 @@
 import { Bell } from 'lucide-react'
 import React from 'react'
 import { Deposit } from '../components/Deposit'
+import { Merchants } from '../components/Merchants'
 
 export const Dashboard = () => {
   return (
@@ -17,8 +18,9 @@ export const Dashboard = () => {
 
       <div className="flex flex-col gap-7 mt-9">
 
-        <div className='grid grid-cols-1 xl:grid-cols-2'>
+        <div className='grid grid-cols-1 xl:grid-cols-2 gap-10'>
           <Deposit />
+          <Merchants />
         </div>
 
       </div>

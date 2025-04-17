@@ -28,11 +28,11 @@ export const Deposit = () => {
                     <h4 className='text-xl text-black font-semibold'>₦ 34,645,233</h4>
                 </div>
 
-                <div className='flex flex-row gap-3 justify-between'>
+                <div className='flex flex-row overflow-x-auto xl:overflow-hidden gap-3 justify-between '>
                     <Button label={'Send'} icon={<ArrowUp className='w-5 h-5 text-gray-900' />} />
                     <Button label={'Receive'} icon={<ArrowUp className='w-5 h-5 text-gray-900' />} />
                     <Button label={'Swap'} icon={<ArrowRightLeft className='w-5 h-5 text-gray-900' />} />
-                    <div className='cursor-pointer rounded-full flex items-center justify-center bg-gray-100 p-4'>
+                    <div className='cursor-pointer rounded-full flex items-center justify-center hover:bg-gray-100 bg-gray-50 p-4'>
                         <EllipsisVertical />
                     </div>
                 </div>
