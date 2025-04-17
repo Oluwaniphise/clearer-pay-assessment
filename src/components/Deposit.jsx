@@ -28,7 +28,7 @@ export const Deposit = () => {
                     <h4 className='text-2xl text-black font-semibold'>₦ 34,645,233</h4>
                 </div>
 
-                <div className='flex flex-row overflow-x-auto xl:overflow-hidden gap-3 justify-between '>
+                <div className='flex flex-row overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent xl:overflow-hidden gap-3 justify-between '>
                     <Button label={'Send'} icon={<ArrowUp className='w-5 h-5 text-gray-900' />} />
                     <Button label={'Receive'} icon={<ArrowUp className='w-5 h-5 text-gray-900' />} />
                     <Button label={'Swap'} icon={<ArrowRightLeft className='w-5 h-5 text-gray-900' />} />

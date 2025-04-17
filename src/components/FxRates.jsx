@@ -82,7 +82,7 @@ export const FxRates = () => {
                     <h5 className='text-gray-400'>See all</h5>
                 </div>
 
-                <div className='w-full flex flex-row  gap-5 overflow-x-auto '>
+                <div className='w-full flex flex-row  gap-5 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent '>
 
                     {fxRates.map((fxRate, index) => (
 

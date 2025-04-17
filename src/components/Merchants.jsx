@@ -25,7 +25,7 @@ export const Merchants = () => {
 
                 </div>
 
-                <div className="w-full flex flex-row justify-between overflow-x-auto xl:overflow-x-hidden py-4">
+                <div className="w-full flex flex-row justify-between overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent xl:overflow-x-hidden py-4">
                     <div className="flex">
                         {merchants.map((merchant) => (
                             <Merchant key={merchant.id} merchant={merchant} />
