@@ -32,9 +32,9 @@ export const Deposit = () => {
                     <Button label={'Send'} icon={<ArrowUp className='w-5 h-5 text-gray-900' />} />
                     <Button label={'Receive'} icon={<ArrowUp className='w-5 h-5 text-gray-900' />} />
                     <Button label={'Swap'} icon={<ArrowRightLeft className='w-5 h-5 text-gray-900' />} />
-                    <div className='cursor-pointer rounded-full flex items-center justify-center hover:bg-gray-100 bg-gray-50 p-4'>
+                    <button className='cursor-pointer rounded-full flex items-center justify-center hover:bg-gray-100 bg-gray-50 p-4'>
                         <EllipsisVertical />
-                    </div>
+                    </button>
                 </div>
             </div>
         </CardComponent>

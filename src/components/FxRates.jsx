@@ -79,7 +79,7 @@ export const FxRates = () => {
             <div className='w-full flex flex-col gap-6'>
                 <div className='flex flex-row justify-between'>
                     <h4 className='text-gray-900 text-xl'>FX Rates</h4>
-                    <h5 className='text-gray-400'>See all</h5>
+                    <h5 className='text-gray-400 cursor-pointer'>See all</h5>
                 </div>
 
                 <div className='w-full flex flex-row  gap-7 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent '>

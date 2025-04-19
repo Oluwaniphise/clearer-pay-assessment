@@ -1,6 +1,6 @@
-import { Menu, X, Home, Wallet, CreditCard, Settings, User, UserCheck, ChevronDown } from "lucide-react";
+import { Menu, X, Home, Wallet, CreditCard, Settings, User, UserCheck, ChevronDown, MenuSquareIcon, MenuIcon } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const navLinks = [
     { icon: <Home size={18} />, label: "Dashboard", path: '/dashboard' },
@@ -12,31 +12,39 @@ const navLinks = [
 
 export const Header = () => {
     const [mobileOpen, setMobileOpen] = useState(false);
-    const isActive = (path) => {
-        if (path === '/') {
-          return location.pathname === '/' || location.pathname === '/dashboard';
-        }
-        return location.pathname === path;
-      };
+
 
     return (
         <header className="flex flex-col ">
             <div className="flex flex-row justify-between items-center border-b border-gray-200 pb-3.5">
 
                 <div className="flex flex-row items-center gap-9">
-                    <h1 className="text-black text-3xl">ClearerPay</h1>
+                    <h1 className="text-black text-2xl">ClearerPay</h1>
 
                     <div className="hidden xl:flex flex-row gap-8 items-center">
                         {navLinks.map((item, index) => (
-                            <Link
-                                to={item.path}
+                            <NavLink
                                 key={index}
-                                className="flex items-center gap-2 text-gray-700 hover:text-black"
-                            >
-                                {/* {item.icon} */}
-                                {item.label}
-                            </Link>
+                                to={item.path}
+                                className={({ isActive }) => `
+                            relative
+                            text-gray-700
+                            hover:text-black
+                            ${isActive ? 'text-black font-semibold' : ''}
+                          `}
+                                children={({ isActive }) => (
+                                    <>
+                                        <div className="inline-flex gap-x-2 items-center">
+                                            {isActive && <span> {item.icon}</span>} {item.label}
+                                        </div>
+
+                                        {isActive && <span className="absolute left-0 right-0 -bottom-[21px] border-b-2 border-black"></span>}
+                                    </>
+                                )}
+                            />
                         ))}
+
+
                     </div>
                 </div>
 
@@ -52,11 +60,17 @@ export const Header = () => {
                         Settings
                     </div>
                 </div>
+
+                <div className="xl:hidden">
+                    <button onClick={() => setMobileOpen(true)}>
+                        <MenuIcon className="w-5 h-5 text-gray-950" />
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu Overlay */}
             {mobileOpen && (
-                <div className="md:hidden fixed inset-0 z-50 bg-white">
+                <div className="xl:hidden fixed inset-0 z-50 bg-white">
                     <div className="flex items-center justify-between p-4 border-b">
                         <div className="text-xl font-semibold">ClearerPay</div>
                         <button onClick={() => setMobileOpen(false)}>
@@ -66,14 +80,15 @@ export const Header = () => {
 
                     <nav className="flex flex-col gap-4 p-4 text-sm text-gray-700">
                         {navLinks.map((item, index) => (
-                            <button
+                            <NavLink
+                                to={item.path}
                                 key={index}
                                 className="flex items-center gap-2 py-2 hover:text-black"
                                 onClick={() => setMobileOpen(false)}
                             >
                                 {item.icon}
                                 {item.label}
-                            </button>
+                            </NavLink>
                         ))}
 
                         <hr className="my-2" />
