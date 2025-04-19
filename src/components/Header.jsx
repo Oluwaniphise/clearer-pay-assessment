@@ -1,4 +1,4 @@
-import { Menu, X, Home, Wallet, CreditCard, Settings, User, UserCheck, ChevronDown, MenuSquareIcon, MenuIcon } from "lucide-react";
+import { Menu, X, Home, Wallet, CreditCard, Settings, User, UserCheck, ChevronDown, MenuSquareIcon, MenuIcon, Users, Receipt, ReceiptText } from "lucide-react";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
@@ -6,8 +6,8 @@ const navLinks = [
     { icon: <Home size={18} />, label: "Dashboard", path: '/dashboard' },
     { icon: <Wallet size={18} />, label: "Wallet", path: '/wallet' },
     { icon: <CreditCard size={18} />, label: "Merchants", path: '/merchants' },
-    { icon: <Settings size={18} />, label: "Transactions", path: '/transactions' },
-    { icon: <Settings size={18} />, label: "Beneficiaries", path: '/beneficiaries' },
+    { icon: <ReceiptText size={18} />, label: "Transactions", path: '/transactions' },
+    { icon: <Users size={18} />, label: "Beneficiaries", path: '/beneficiaries' },
 ];
 
 export const Header = () => {
@@ -30,7 +30,7 @@ export const Header = () => {
                             relative
                             text-gray-700
                             hover:text-black
-                            ${isActive ? 'text-black font-semibold' : ''}
+                            ${isActive ? 'text-gray-900 font-semibold' : ''}
                           `}
                                 children={({ isActive }) => (
                                     <>
@@ -38,7 +38,7 @@ export const Header = () => {
                                             {isActive && <span> {item.icon}</span>} {item.label}
                                         </div>
 
-                                        {isActive && <span className="absolute left-0 right-0 -bottom-[21px] border-b-2 border-black"></span>}
+                                        {isActive && <span className="absolute left-0 right-0 -bottom-[21px] border-b-2 border-gray-900"></span>}
                                     </>
                                 )}
                             />
