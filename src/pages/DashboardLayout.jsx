@@ -4,6 +4,7 @@ import { Deposit } from '../components/Deposit'
 import { Merchants } from '../components/Merchants'
 import { FxRates } from '../components/FxRates'
 import { Transactions } from '../components/Transactions'
+import { MoneyFlow } from '../components/MoneyFlow'
 
 export const Dashboard = () => {
   return (
@@ -26,8 +27,15 @@ export const Dashboard = () => {
       <div className='mt-9'>
         <FxRates />
       </div>
-      <div className='mt-9'>
-        <Transactions />
+      <div className='mt-9 flex flex-col xl:flex-row gap-5 '>
+        <div className='w-full xl:w-2/3'>
+          <Transactions />
+
+        </div>
+
+        <div className='w-full xl:w-1/3'>
+          <MoneyFlow />
+        </div>
       </div>
     </main>
   )

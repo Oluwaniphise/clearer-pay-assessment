@@ -25,7 +25,7 @@ export const Deposit = () => {
                         </button>
                     </div>
 
-                    <h4 className='text-2xl text-black font-semibold'>₦ 34,645,233</h4>
+                    <h4 className='text-xl xl:text-2xl text-black font-semibold'>₦ 34,645,233</h4>
                 </div>
 
                 <div className='flex flex-row overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent xl:overflow-hidden gap-3 justify-between '>

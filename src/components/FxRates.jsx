@@ -79,14 +79,14 @@ export const FxRates = () => {
             <div className='w-full flex flex-col gap-6'>
                 <div className='flex flex-row justify-between'>
                     <h4 className='text-gray-900 text-xl'>FX Rates</h4>
-                    <h5 className='text-gray-400 cursor-pointer'>See all</h5>
+                    <button className='text-gray-400 cursor-pointer'>See all</button>
                 </div>
 
                 <div className='w-full flex flex-row  gap-7 overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent '>
 
                     {fxRates.map((fxRate, index) => (
 
-                        <div key={index} className="bg-[#F9F9F9] min-w-[200px] rounded-xl px-4 py-2 flex items-center gap-3  shadow-sm">
+                        <div key={index} className="bg-[#F9F9F9] min-w-[200px] rounded-xl px-2 py-2 flex items-center gap-3  shadow-sm">
 
                             <div className="flex items-center -space-x-2 ">
                                 <img src={`https://flagcdn.com/w40/${fxRate.code1}.png`} alt={`${fxRate.country1} Flag`} className="w-6 h-6 rounded-full border  border-gray-300 " />
