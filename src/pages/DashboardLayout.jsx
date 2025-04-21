@@ -4,7 +4,7 @@ import { Deposit } from '../components/Deposit'
 import { Merchants } from '../components/Merchants'
 import { FxRates } from '../components/FxRates'
 import { Transactions } from '../components/Transactions'
-import { MoneyFlow } from '../components/MoneyFlow'
+import { MoneyFlow } from '../components/MoneyFlowChart'
 
 export const Dashboard = () => {
   return (
