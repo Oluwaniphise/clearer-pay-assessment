@@ -7,7 +7,7 @@ export const MoneyFlow = () => {
     return (
         <CardComponent>
             <div className="flex flex-col space-y-4">
-                <div className="flex justify-between items-center">
+                <div className="flex flex-col items-start gap-y-4 md:flex-row justify-between md:items-center">
                     <h2 className="text-lg font-medium">Money out/Money in</h2>
                     <div className="bg-gray-100 rounded-xl px-5 py-2 flex items-center">
                         <span className="text-sm">Date Range</span>
