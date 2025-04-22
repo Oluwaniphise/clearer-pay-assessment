@@ -103,7 +103,7 @@ export const FxRates = () => {
                                 </span>
                                 <div className='flex flex-col gap-1'>
                                     <p className='text-xs text-gray-400'>{fxRate.country2}</p>
-                                    <h5 className='text-sm font-medium text-gray-800'>{fxRate.country2}</h5>
+                                    <h5 className='text-sm font-medium text-gray-800'>{fxRate.rate2}</h5>
                                 </div>
                             </div>
                         </div>
