@@ -29,10 +29,10 @@ const TransactionItem = ({ transaction }) => {
       <p  className="text-xs xl:text-sm font-medium text-gray-800">{transaction.type}</p>
     </div>
   
-    <div className="flex-1  flex flex-col xl:flex-row items-center text-centder xl:gap-3.5">
+    <div className="flex-1 min-w-[200px] flex flex-row items-center text-centder gap-3.5">
       <p className="text-[10px] md:text-xs text-gray-500">{transaction.details}</p>
-      <p className="hidden xl:block text-gray-400 text-xs">·</p>
-      <p className="text-gray-400 hidden xl:block text-xs">Today, 13:30</p>
+      <p className=" text-gray-400 text-xs">·</p>
+      <p className="text-gray-400  text-xs">Today, 13:30</p>
     </div>
   
     <div className="flex items-center gap-6 justify-end min-w-32 text-right">
