@@ -11,7 +11,7 @@ const TransactionItem = ({ transaction }) => {
       case 'Receive GBP -> NGN':
         return { icon: <ArrowDown size={16} />, color: 'text-green-500', bgColor: 'bg-green-100' };
       case 'Withdraw GBP':
-        return { icon: <Minus size={16} />, color: 'text-gray-500', bgColor: 'bg-gray-100' };
+        return { icon: <ArrowDown size={16} />, color: 'text-gray-500', bgColor: 'bg-gray-100' };
       default:
         return { icon: null, color: 'text-gray-500', bgColor: 'bg-gray-100' };
     }
@@ -29,7 +29,7 @@ const TransactionItem = ({ transaction }) => {
       <p  className="text-xs xl:text-sm font-medium text-gray-800">{transaction.type}</p>
     </div>
   
-    <div className="flex-1 min-w-[200px] flex flex-row items-center text-centder gap-3.5">
+    <div className="flex-1 min-w-[200px] flex flex-row items-center text-centder gap-2">
       <p className="text-[10px] md:text-xs text-gray-500">{transaction.details}</p>
       <p className=" text-gray-400 text-xs">·</p>
       <p className="text-gray-400  text-xs">Today, 13:30</p>
