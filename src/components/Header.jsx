@@ -1,9 +1,9 @@
-import { Menu, X, Home, Wallet, CreditCard, Settings, User, UserCheck, ChevronDown, MenuSquareIcon, MenuIcon, Users, Receipt, ReceiptText } from "lucide-react";
+import {  X, Home, Wallet, CreditCard, Settings, User, UserCheck, ChevronDown, MenuSquareIcon, MenuIcon, Users, Receipt, ReceiptText, GripVertical } from "lucide-react";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 const navLinks = [
-    { icon: <Home size={18} />, label: "Dashboard", path: '/dashboard' },
+    { icon: <GripVertical size={18} />, label: "Dashboard", path: '/dashboard' },
     { icon: <Wallet size={18} />, label: "Wallet", path: '/wallet' },
     { icon: <CreditCard size={18} />, label: "Merchants", path: '/merchants' },
     { icon: <ReceiptText size={18} />, label: "Transactions", path: '/transactions' },
@@ -19,7 +19,7 @@ export const Header = () => {
             <div className="flex flex-row justify-between items-center border-b border-gray-200 pb-3.5">
 
                 <div className="flex flex-row items-center gap-9">
-                    <h1 className="text-black text-2xl">ClearerPay</h1>
+                    <Link to={'/'} className="text-black text-2xl">ClearerPay</Link>
 
                     <div className="hidden xl:flex flex-row gap-8 items-center">
                         {navLinks.map((item, index) => (
@@ -72,7 +72,7 @@ export const Header = () => {
             {mobileOpen && (
                 <div className="xl:hidden fixed inset-0 z-50 bg-white">
                     <div className="flex items-center justify-between p-4 border-b">
-                        <div className="text-xl font-semibold">ClearerPay</div>
+                        <Link to={'/'} className="text-xl font-semibold">ClearerPay</Link>
                         <button onClick={() => setMobileOpen(false)}>
                             <X className="w-6 h-6" />
                         </button>

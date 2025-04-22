@@ -7,6 +7,7 @@ import { Merchants } from './pages/Merchants';
 import {Transactions} from './pages/Transactions';
 import { Beneficiaries } from './pages/Beneficiaries';
 import { Settings } from './pages/Settings';
+import { Navigate } from 'react-router-dom';
 
 function App() {
 
@@ -14,7 +15,7 @@ function App() {
     <BrowserRouter>
       <PageLayout>
         <Routes>
-          <Route path="/" element={<Dashboard />} />
+          <Route path="/" element={<Navigate to="/dashboard" replace />}  />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/wallet" element={<Wallet />} />
           <Route path="/merchants" element={<Merchants />} />

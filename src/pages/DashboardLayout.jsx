@@ -20,7 +20,7 @@ export const Dashboard = () => {
         </div>
       </div>
 
-      <div className="flex flex-col xl:flex-row gap-10 mt-9">
+      <div className="flex flex-col xl:flex-row gap-10 mt-5">
         <Deposit />
         <Merchants />
       </div>
