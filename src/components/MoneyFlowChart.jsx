@@ -8,8 +8,8 @@ export const MoneyFlow = () => {
         <CardComponent>
             <div className="flex flex-col space-y-4">
                 <div className="flex justify-between items-center">
-                    <h2 className="text-lg font-semibold">Money out/Money in</h2>
-                    <div className="bg-gray-200 rounded-xl px-5 py-2 flex items-center">
+                    <h2 className="text-lg font-medium">Money out/Money in</h2>
+                    <div className="bg-gray-100 rounded-xl px-5 py-2 flex items-center">
                         <span className="text-sm">Date Range</span>
                         <ChevronDown className="w-5 h-4 ml-1" />
                     </div>

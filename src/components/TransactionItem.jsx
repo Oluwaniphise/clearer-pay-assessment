@@ -2,8 +2,8 @@ import React from 'react';
 import { ArrowUp, ArrowDown, ArrowLeftRight, Minus, EllipsisVertical } from 'lucide-react';
 
 const TransactionItem = ({ transaction }) => {
-  const getIconAndColor = (type) => {
-    switch (type) {
+  const getIconAndColor = (rawType) => {
+    switch (rawType) {
       case 'Sent GBP':
         return { icon: <ArrowUp size={16} />, color: 'text-red-500', bgColor: 'bg-red-100' };
       case 'Exchanged GBP -> NGN':
@@ -17,7 +17,7 @@ const TransactionItem = ({ transaction }) => {
     }
   };
 
-  const { icon, color, bgColor } = getIconAndColor(transaction.type);
+  const { icon, color, bgColor } = getIconAndColor(transaction.rawType);
   const amountColorClass = transaction.amount.startsWith('-') ? 'text-red-500' : 'text-black';
 
   return (
@@ -26,10 +26,10 @@ const TransactionItem = ({ transaction }) => {
       <div className={`rounded-xl ${bgColor} p-3 ${color}`}>
         {icon}
       </div>
-      <p className="text-xs xl:text-sm font-medium text-gray-800">{transaction.type}</p>
+      <p  className="text-xs xl:text-sm font-medium text-gray-800">{transaction.type}</p>
     </div>
   
-    <div className="flex-1 flex flex-col xl:flex-row items-center text-centder xl:gap-3.5">
+    <div className="flex-1  flex flex-col xl:flex-row items-center text-centder xl:gap-3.5">
       <p className="text-[10px] md:text-xs text-gray-500">{transaction.details}</p>
       <p className="hidden xl:block text-gray-400 text-xs">·</p>
       <p className="text-gray-400 hidden xl:block text-xs">Today, 13:30</p>
