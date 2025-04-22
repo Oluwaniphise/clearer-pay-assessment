@@ -1,4 +1,4 @@
-import {  X, Home, Wallet, CreditCard, Settings, User, UserCheck, ChevronDown, MenuSquareIcon, MenuIcon, Users, Receipt, ReceiptText, GripVertical } from "lucide-react";
+import { X, Home, Wallet, CreditCard, Settings, User, UserCheck, ChevronDown, MenuSquareIcon, MenuIcon, Users, Receipt, ReceiptText, GripVertical } from "lucide-react";
 import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
@@ -83,7 +83,12 @@ export const Header = () => {
                             <NavLink
                                 to={item.path}
                                 key={index}
-                                className="flex items-center gap-2 py-2 hover:text-black"
+                                className={({ isActive }) => `
+                                text-gray-700
+                                hover:text-black flex items-center gap-2 py-2
+                                ${isActive ? 'text-gray-900 font-semibold' : ''}
+                              `}
+
                                 onClick={() => setMobileOpen(false)}
                             >
                                 {item.icon}
@@ -99,9 +104,9 @@ export const Header = () => {
                         </button>
 
                         <button className="inline-flex text-gray-700 items-center gap-2">
-                        <Settings className="w-5 h-5 text-gray-500" />
-                        Settings
-                    </button>
+                            <Settings className="w-5 h-5 text-gray-500" />
+                            Settings
+                        </button>
                     </nav>
                 </div>
             )}
